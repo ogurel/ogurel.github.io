@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>СМИ о нас</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main2.css">
+	<link rel="stylesheet" href="libs/slick/slick.css">
+</head>
+<body>
+      <header class="header2">
+        <div class="header2__head">
+            <p>пресс-центр</p>
+            <p></p>
+        </div>
+        <div class="header2__menu">
+            <a href="" class="item-menu-header2 item-menu-header2_active">сми о нас </a>
+            <a href="" class="item-menu-header2">отзывы</a>
+            <a href="" class="item-menu-header2">новости</a>
+        </div>
+    </header>
+    
+   <div class="smi-section">
+      <div class="c-container smi-section__container">
+            <div class="title-2">
+              <p class="title-2__capt">сми</p>
+               <h1 class="title-2__head">сми о нас</h1>
+           </div>
+           <div class="media-items">
+               <div class="post-media">
+                   <div class="post-media__head">
+                       <div class="post-media__name">Best Investor</div>
+                       <div class="post-media__date">23.05.2020</div>
+                   </div>
+                   <div class="post-media__body">
+                       <div class="post-media__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt nisl in justo elementum iaculis. Aliquam odio nulla, pharetra eget massa dictum, iaculis convallis ante. Aenean imperdiet lacus id sem sollicitudin congue. Etiam venenatis molestie hendrerit. Etiam mattis, turpis sed pharetra condimentum, dui risus scelerisque neque</div>
+                       <div class="post-media__foot">
+                           <div class="post-media__source">
+                               <a href="">iz.ru</a>
+                           </div>
+                           <div class="post-media__more">читать полностью</div>
+                       </div>
+                   </div>
+               </div>
+               
+               
+               <div class="post-media">
+                   <div class="post-media__head">
+                       <div class="post-media__name">Pro Invest</div>
+                       <div class="post-media__date">23.05.2020</div>
+                   </div>
+                   <div class="post-media__body">
+                       <div class="post-media__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt nisl in justo elementum iaculis. Aliquam odio nulla, pharetra eget massa dictum, iaculis convallis ante. Aenean imperdiet lacus id sem sollicitudin congue. Etiam venenatis molestie hendrerit. Etiam mattis, turpis sed pharetra condimentum, dui risus scelerisque neque</div>
+                       <div class="post-media__foot">
+                           <div class="post-media__source">
+                               <a href="">kommersant.ru</a>
+                           </div>
+                           <div class="post-media__more">читать полностью</div>
+                       </div>
+                   </div>
+               </div>
+               
+                <div class="post-media">
+                   <div class="post-media__head">
+                       <div class="post-media__name">Pro Invest</div>
+                       <div class="post-media__date">23.05.2020</div>
+                   </div>
+                   <div class="post-media__body">
+                       <div class="post-media__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tincidunt nisl in justo elementum iaculis. Aliquam odio nulla, pharetra eget massa dictum, iaculis convallis ante. Aenean imperdiet lacus id sem sollicitudin congue. Etiam venenatis molestie hendrerit. Etiam mattis, turpis sed pharetra condimentum, dui risus scelerisque neque</div>
+                       <div class="post-media__foot">
+                           <div class="post-media__source">
+                               <a href="">kommersant.ru</a>
+                           </div>
+                           <div class="post-media__more">читать полностью</div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+       <footer class="footer2" style="margin-top: 0">
+        <div class="c-container footer2__container">
+            <div class="footer2__left">2020 ОФИЦИАЛЬНЫЙ ПРЕСС-ЦЕНТР ПЛАТФОРМЫ “PROFIT PLUS”</div>
+            <div class="footer2__right">
+                <div class="footer2__social">
+                    <a href=""><img src="img/vk.png" alt=""></a>
+                    <a href=""><img src="img/telegram.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script>
+    $(function(){
+        
+        
+         $('.media-items').slick({
+        slidesToShow: 2,
+        dots: false,
+        responsive: [
+           
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+    }
+  ]
+
+
+    });
+    })
+    </script>
+</body>
+</html>
