@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'), url('fonts/Roboto.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('fonts/Robotobold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+}
+
+.page {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 366px;
+
+}
+
+.menu {
+    display: none;
+    background: #00576b;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.8s;
+    z-index: 100;
+}
+
+.menu .container {
+    position: relative;
+}
+
+.menu__close {
+    position: absolute;
+    top: -10px;
+    right: 14px;
+    display: block;
+    font-size: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu__close img {
+    width: 25px;
+    height: 25px;
+}
+
+.menu__item {
+    font-size: 17px;
+    display: block;
+    margin: 19px 0;
+    color: #fff;
+}
+
+.menu_active {
+    display: block;
+    opacity: 1;
+}
+
+.header {
+    background: #00576b;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.title1 {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 5px 8px 5px 0;
+}
+
+.menu-btn {
+    width: 63px;
+    padding: 0 5px;
+    height: 38px;
+    border: 3px solid #FFF;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    margin: 5.5px 0;
+}
+
+.main-section {}
+
+.main-section_reg {
+    margin-top: 32px;
+}
+
+.form-section {}
+
+.caption1 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1.6em;
+    text-align: center;
+}
+
+.forma {
+    border: 1px solid #000000;
+    padding-bottom: 23px;
+}
+
+.forma__row {
+    margin-bottom: 15px;
+}
+
+.input-bl {}
+
+.input-bl__title {
+    font-size: 18px;
+    padding: 11px 2px;
+}
+
+.input-bl__field {}
+
+.input-bl__field input {
+    border: none;
+    background: #C4C4C4;
+    width: 100%;
+    font-family: inherit;
+    padding: 12px 9px;
+    font-size: 17px;
+}
+
+.forma .forma__row:last-of-type {
+    margin-bottom: 0;
+}
+
+.wrapper1 {
+    text-align: center;
+    margin-top: 21px;
+}
+
+.forma-footer {
+    font-size: 14px;
+    margin-bottom: 1.1em;
+}
+
+.img-wrapp img {
+    max-width: 100%;
+}
+
+.main-section_why-we {
+    margin-top: 26px;
+}
+
+.title2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 1.6em;
+}
+
+.advant-items {
+    margin-bottom: 44px;
+}
+
+.item-advant {
+    color: #fff;
+    margin-bottom: 10px;
+    background: #00576b;
+    padding: 6px;
+}
+
+.item-advant__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1.1em;
+}
+
+.item-advant__desc {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.get-lesson-wrap {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background: #C4C4C4;
+    border-radius: 5px;
+    background: #00576b;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 17px;
+    color: #fff;
+}
+
+
+.main-section_for-whom {
+    margin-top: 29px;
+}
+
+.aud-items {
+    margin-bottom: 46px;
+}
+
+.item-aud {
+    background: #00576b;
+    margin-bottom: 15px;
+    color: #fff;
+    padding: 6px 6px 15px 6px;
+}
+
+.item-aud__heading {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 1.46em;
+}
+
+.item-aud__desc {
+    font-size: 18px;
+}
+
+
+.forma__foot {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    font-size: 16px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border: 1px solid #000000;
+    padding: 6px 14px;
+}
+
+.main-section_thank {
+    margin-top: 30px;
+}
+
+.thank-block {
+    text-align: center;
+    font-size: 17px;
+}
