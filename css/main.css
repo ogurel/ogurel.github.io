@@ -34,7 +34,7 @@
 
 html {
     scroll-behavior: smooth;
-    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
  
 }
 
@@ -50,7 +50,8 @@ p {
 
 body {
     min-width: 1500px;
-    mih-height:100vh;
+    min-height:100vh;
+    height: -webkit-fill-available;
     font-display: swap;
 }
 
