@@ -51,7 +51,7 @@ p {
 body {
     min-width: 1500px;
     min-height:100vh;
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
     font-display: swap;
 }
 
@@ -112,6 +112,7 @@ textarea {
     background-size: 100%;
     background-color: #0c1349;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 /* begin header*/
