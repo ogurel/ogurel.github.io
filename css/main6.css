@@ -51,7 +51,7 @@ p {
 body {
     min-width: 1500px;
     font-display: swap;
-     min-height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
 }
 
 a {
@@ -2418,12 +2418,13 @@ input[name="condit"]:checked + .chck-label .chck-label__check img {
     color: #fff;
     min-width: 1920px;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 .page-cab__container {
     max-width: 1920px;
-
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     margin-left: auto;
     margin-right: auto;
     display: flex;
