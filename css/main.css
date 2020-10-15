@@ -51,7 +51,7 @@ p {
 body {
     min-width: 1500px;
     font-display: swap;
-    /*    min-height: -webkit-fill-available;*/
+    min-height: -webkit-fill-available;
 }
 
 a {
