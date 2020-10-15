@@ -2438,11 +2438,13 @@ input[name="condit"]:checked + .chck-label .chck-label__check img {
     color: #fff;
     min-width: 1920px;
     min-height: 100vh;
+    display: flex;
     /*    min-height: -webkit-fill-available;*/
 }
 
 .page-cab__container {
     max-width: 1920px;
+    /*    height: 100%;*/
     min-height: 100vh;
     /*    min-height: -webkit-fill-available;*/
     margin-left: auto;
