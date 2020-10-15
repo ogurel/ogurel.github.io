@@ -11,15 +11,32 @@
             margin: 0;
             padding: 0;
         }
-        body{
-             display: flex;
-    flex-flow: column nowrap;
-    min-height: 100%;
-        min-height: -webkit-fill-available;
+
+        html {
+            height: -webkit-fill-available;
         }
+
+        body {
+            /*
+            display: flex;
+            flex-flow: column nowrap;
+            min-height: 100%;
+            min-height: -webkit-fill-available;
+*/
+            min-height: -webkit-fill-available;
+        }
+
         .page {
             background: red;
+            /*            min-height: 100vh;*/
+
+
+            display: flex;
+            flex-flow: column nowrap;
+            min-height: 100%;
             min-height: 100vh;
+            height: 100%;
+            min-height: -webkit-fill-available;
         }
 
     </style>
