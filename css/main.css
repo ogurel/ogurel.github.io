@@ -121,6 +121,7 @@ textarea {
 }
 
 .page {
+    overflow: hidden;
     font-family: "Ciutadella Rounded", sans-serif;
     color: #fff;
     background-image: url(../img/main-bg.png);
@@ -2788,6 +2789,7 @@ input[name="condit"]:checked + .chck-label .chck-label__check img {
 /* begin dashboards*/
 
 .page-cab {
+    flex-grow: 1;
     background-color: #0c1349;
     /*    background-color: #050B46;*/
     font-family: "Ciutadella Rounded", sans-serif;
