@@ -35,6 +35,7 @@
 html {
     scroll-behavior: smooth;
     min-height: 100%;
+    height: 100%;
     /*    height: -webkit-fill-available;*/
 }
 
@@ -57,8 +58,11 @@ p {
 body {
     min-width: 1500px;
     font-display: swap;
-    height: 100%;
+    min-height: 100%;
     /*    min-height: -webkit-fill-available;*/
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -117,13 +121,14 @@ textarea {
 }
 
 .page {
-    overflow-x: hidden;
     font-family: "Ciutadella Rounded", sans-serif;
     color: #fff;
     background-image: url(../img/main-bg.png);
     background-size: 100%;
     background-color: #0c1349;
     min-height: 100vh;
+    position: relative;
+    flex-grow: 1;
     /*    min-height: -webkit-fill-available;*/
 }
 
@@ -131,6 +136,233 @@ textarea {
     .page {
         min-height: -webkit-fill-available;
     }
+}
+
+
+.star {
+    display: none;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #FFF;
+    top: 100px;
+    left: 400px;
+    position: absolute;
+    z-index: 100;
+    transform-origin: 100% 0;
+    animation: star-ani 1s infinite ease-out;
+    animation-direction: normal;
+    opacity: 0;
+}
+
+.star:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    border: 2px solid #F00;
+    border-width: 2px 150px 2px 150px;
+    border-color: transparent transparent transparent #FFF;
+    transform: rotate(-45deg) translate3d(1px, -1px, 0);
+    transform-origin: 0% 100%;
+    animation-direction: normal;
+}
+
+.pink {
+    top: 150px;
+    left: 500px;
+    background: #ff5a99;
+    animation-delay: 1.8s;
+}
+
+.pink:after {
+    border-color: transparent transparent transparent #ff5a99;
+    animation-delay: 1.8s;
+}
+
+.blue {
+    top: 100px;
+    left: 450px;
+    background: #4dabff;
+    animation-delay: 4.5s;
+}
+
+.blue:after {
+    border-color: transparent transparent transparent #4dabff;
+    animation-delay: 4.5s;
+}
+
+.yellow {
+    top: 50px;
+    left: 600px;
+    background: #ffcd5c;
+    animation-delay: 5.8s;
+}
+
+.yellow:after {
+    border-color: transparent transparent transparent #ffcd5c;
+    animation-delay: 5.8s;
+}
+
+@-webkit-keyframes shooting-ani {
+    0% {}
+
+    50% {
+        transform: scale(1) rotate(-45deg) translate(0px, 0px);
+    }
+
+    100% {
+        transform: scale(0.5) rotate(-45deg) translate(0px, -1px);
+    }
+}
+
+@-webkit-keyframes star-ani {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(0) translate3d(0, 0, 0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
+
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px);
+        -ms-transform: translateX(2000px);
+        transform: translateX(2000px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+}
+
+/* begin animation*/
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+        -ms-transform: translateX(-2000px);
+        transform: translateX(-2000px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+}
+
+@keyframes tada {
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    10%,
+    20% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+        -ms-transform: scale(0.9) rotate(-3deg);
+        transform: scale(0.9) rotate(-3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+        -ms-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        -ms-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+        -ms-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }
+}
+
+.tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+
+
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
+    }
+}
+
+/* end animation*/
+
+.star_active {
+    display: block;
+    animation: star-ani 1s infinite ease-out;
+}
+
+.star_active:after {
+    animation: shooting-ani 1s infinite ease-out;
 }
 
 /* begin header*/
@@ -677,6 +909,25 @@ textarea {
 
 }
 
+.plan-sect > .container {
+    position: relative;
+}
+
+.plan-sect__circle1 {
+    position: absolute;
+
+    bottom: 196px;
+    left: 39px;
+
+}
+
+.plan-sect__circle2 {
+    position: absolute;
+    bottom: -32px;
+    left: 451px;
+
+}
+
 .plan {
     margin-left: auto;
     max-width: 1284px;
@@ -1017,6 +1268,7 @@ input[name="Plan"]:checked + .plan-block__item .plan-block__row3 {
 .advant {
     display: flex;
     position: absolute;
+
 }
 
 .advant__txt {
@@ -1046,6 +1298,7 @@ input[name="Plan"]:checked + .plan-block__item .plan-block__row3 {
     justify-content: center;
     align-items: center;
     box-shadow: 0 33px 55px rgba(0, 0, 0, 0.55);
+    animation: radial-pulse 1s infinite;
 }
 
 .advantages__items .advant:nth-child(2),
@@ -1101,6 +1354,26 @@ input[name="Plan"]:checked + .plan-block__item .plan-block__row3 {
 .advantages-sect__started {
     text-align: center;
     margin-top: 312px;
+}
+
+.advantages__circle1 {
+    display: inline-block;
+    font-size: 0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 19px;
+    right: 174px;
+    animation: radial-pulse 1s infinite;
+}
+
+.advantages__circle2 {
+    display: inline-block;
+    font-size: 0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -124px;
+    left: 137px;
+    animation: radial-pulse 1s infinite;
 }
 
 /* end advantages-sect*/
@@ -1668,7 +1941,29 @@ input[name="Plan"]:checked + .plan-block__item .plan-block__row3 {
 
 /* begin feedback-sect*/
 .feedback-sect {
+    position: relative;
     padding-top: 152px;
+}
+
+.feedback-sect__circle2 {
+    position: absolute;
+    top: -37px;
+    right: 12px;
+}
+
+.feedback-sect__circle1 {
+    font-size: 0;
+    display: inline-block;
+    position: absolute;
+    top: 43px;
+    right: 17px;
+    border-radius: 50%;
+    animation: radial-pulse 1s infinite;
+}
+
+.feedback-sect__circle1 img {
+    width: 120px;
+    height: 120px;
 }
 
 .wrapper4 {
@@ -1772,6 +2067,7 @@ input[name="Plan"]:checked + .plan-block__item .plan-block__row3 {
 /* begin footer*/
 
 .footer {
+    margin-top: auto;
     padding-top: 34px;
     padding-bottom: 34px;
     background-color: #030a30;
@@ -1978,6 +2274,27 @@ input[name="Plan"]:checked + .plan-block__item .plan-block__row3 {
 
 .why-choose {
     padding-top: 116px;
+    position: relative;
+}
+
+.circle {
+    display: inline-block;
+    font-size: 0;
+    border-radius: 50%;
+    animation: radial-pulse 1s infinite;
+}
+
+.why-choose__circle1 {
+    position: absolute;
+    position: absolute;
+    bottom: -21px;
+    left: -94px;
+}
+
+.why-choose__circle2 {
+    position: absolute;
+    bottom: -248px;
+    left: 318px;
 }
 
 .why-choose-items {
