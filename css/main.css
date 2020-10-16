@@ -38,6 +38,12 @@ html {
     /*    height: -webkit-fill-available;*/
 }
 
+@supports (-webkit-touch-callout: none) {
+    html {
+        min-height: -webkit-fill-available;
+    }
+}
+
 html,
 body {
     margin: 0;
@@ -53,6 +59,12 @@ body {
     font-display: swap;
     height: 100%;
     /*    min-height: -webkit-fill-available;*/
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        min-height: -webkit-fill-available;
+    }
 }
 
 a {
@@ -112,8 +124,13 @@ textarea {
     background-size: 100%;
     background-color: #0c1349;
     min-height: 100vh;
-    min-height: calc(var(--vh), 1vh) * 100;
     /*    min-height: -webkit-fill-available;*/
+}
+
+@supports (-webkit-touch-callout: none) {
+    .page {
+        min-height: -webkit-fill-available;
+    }
 }
 
 /* begin header*/
@@ -367,20 +384,39 @@ textarea {
     left: -33px;
     top: calc(50% - 7px);
 
+    animation-name: an1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease
+}
+
+@keyframes an1 {
+    0% {
+        opacity: 1;
+        transform: translateX(30px)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
 }
 
 .invest-in__list .invest-in__list-item:nth-child(1) {
     text-align: right;
+
 }
 
 .invest-in__list .invest-in__list-item:nth-child(1) p:before {
     background-image: url(../img/decor-line1.png);
+    animation-duration: 0;
 }
 
 .invest-in__list .invest-in__list-item:nth-child(2) {}
 
 .invest-in__list .invest-in__list-item:nth-child(2) p:before {
     background-image: url(../img/decor-line2.png);
+    animation-delay: 0.5s;
 }
 
 .invest-in__list .invest-in__list-item:nth-child(3) {
@@ -391,6 +427,7 @@ textarea {
 
 .invest-in__list .invest-in__list-item:nth-child(3) p:before {
     background-image: url(../img/decor-line3.png);
+    animation-delay: 1s;
 }
 
 .invest-in__list .invest-in__list-item:nth-child(4) {
@@ -402,6 +439,7 @@ textarea {
 .invest-in__list .invest-in__list-item:nth-child(4) p:before {
     background-image: url(../img/decor-line4.png);
     left: -49px;
+    animation-delay: 1.7;
 }
 
 .txt1 {
@@ -2443,6 +2481,12 @@ input[name="condit"]:checked + .chck-label .chck-label__check img {
     /*    min-height: -webkit-fill-available;*/
 }
 
+@supports (-webkit-touch-callout: none) {
+    .page-cab {
+        min-height: -webkit-fill-available;
+    }
+}
+
 .page-cab__container {
     max-width: 1920px;
     /*    height: 100%;*/
@@ -2452,6 +2496,12 @@ input[name="condit"]:checked + .chck-label .chck-label__check img {
     margin-right: auto;
     display: flex;
     justify-content: space-between;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .page-cab__container {
+        min-height: -webkit-fill-available;
+    }
 }
 
 .cab-panel {
