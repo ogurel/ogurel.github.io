@@ -8,7 +8,9 @@
     <!--    <meta name="viewport" content="width=device-width">-->
     <script src="viewport-units-buggyfill.js"></script>
     <script>
-        window.viewportUnitsBuggyfill.init();
+//        window.viewportUnitsBuggyfill.init();
+        
+        window.viewportUnitsBuggyfill.init({ force: true, refreshDebounceWait: 250, hacks: window.viewportUnitsBuggyfillHacks });
 
     </script>
     <script src="main.js"></script>
